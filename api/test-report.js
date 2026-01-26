@@ -27,56 +27,6 @@ const clients = {
     apiKey: process.env.DARRELL_INSTANTLY_API_KEY,
     slackWebhook: process.env.DARRELL_SLACK_WEBHOOK,
   },
-  adhooma: {
-    name: 'Adhooma',
-    apiKey: process.env.ADHOOMA_INSTANTLY_API_KEY,
-    slackChannelId: process.env.ADHOOMA_SLACK_CHANNEL_ID,
-  },
-  testclient7: {
-    name: 'Testclient7',
-    apiKey: process.env.TESTCLIENT7_INSTANTLY_API_KEY,
-    slackChannelId: process.env.TESTCLIENT7_SLACK_CHANNEL_ID,
-  },
-  testclient6: {
-    name: 'Testclient6',
-    apiKey: process.env.TESTCLIENT6_INSTANTLY_API_KEY,
-    slackChannelId: process.env.TESTCLIENT6_SLACK_CHANNEL_ID,
-  },
-  testclient5: {
-    name: 'Testclient5',
-    apiKey: process.env.TESTCLIENT5_INSTANTLY_API_KEY,
-    slackChannelId: process.env.TESTCLIENT5_SLACK_CHANNEL_ID,
-  },
-  testclient4: {
-    name: 'Testclient4',
-    apiKey: process.env.TESTCLIENT4_INSTANTLY_API_KEY,
-    slackChannelId: process.env.TESTCLIENT4_SLACK_CHANNEL_ID,
-  },
-  testclient3: {
-    name: 'Testclient3',
-    apiKey: process.env.TESTCLIENT3_INSTANTLY_API_KEY,
-    slackChannelId: process.env.TESTCLIENT3_SLACK_CHANNEL_ID,
-  },
-  testclient2: {
-    name: 'Testclient2',
-    apiKey: process.env.TESTCLIENT2_INSTANTLY_API_KEY,
-    slackChannelId: process.env.TESTCLIENT2_SLACK_CHANNEL_ID,
-  },
-  testclient: {
-    name: 'Testclient',
-    apiKey: process.env.TESTCLIENT_INSTANTLY_API_KEY,
-    slackChannelId: process.env.TESTCLIENT_SLACK_CHANNEL_ID,
-  },
-  test: {
-    name: 'Test',
-    apiKey: process.env.TEST_INSTANTLY_API_KEY,
-    slackChannelId: process.env.TEST_SLACK_CHANNEL_ID,
-  },
-  sarah: {
-    name: 'Sarah',
-    apiKey: process.env.SARAH_INSTANTLY_API_KEY,
-    slackChannelId: process.env.SARAH_SLACK_CHANNEL_ID,
-  },
 };
 
 async function testReport(clientKey) {
