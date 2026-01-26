@@ -74,6 +74,13 @@ async function testReport(clientKey) {
       });
     }
 
+    // Only send to Slack if there was activity this week
+    if (metrics.totalReachedOut === 0 && metrics.totalInterestedLeads === 0) {
+      console.log('\n⏭️  No activity this week - skipping Slack notification');
+      console.log('✅ Report completed (no notification sent)\n');
+      return;
+    }
+
     // Send to Slack
     console.log('\nSending to Slack...');
     await sendSlackReport(
