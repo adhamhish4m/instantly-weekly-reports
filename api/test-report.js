@@ -27,6 +27,11 @@ const clients = {
     apiKey: process.env.DARRELL_INSTANTLY_API_KEY,
     slackWebhook: process.env.DARRELL_SLACK_WEBHOOK,
   },
+  testclient6: {
+    name: 'Testclient6',
+    apiKey: process.env.TESTCLIENT6_INSTANTLY_API_KEY,
+    slackChannelId: process.env.TESTCLIENT6_SLACK_CHANNEL_ID,
+  },
   testclient5: {
     name: 'Testclient5',
     apiKey: process.env.TESTCLIENT5_INSTANTLY_API_KEY,
