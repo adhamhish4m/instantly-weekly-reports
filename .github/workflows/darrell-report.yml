@@ -1,0 +1,29 @@
+name: Darrell Weekly Report
+
+on:
+  schedule:
+    # Every Sunday at 15:00 UTC (9:00 AM CST)
+    - cron: '0 15 * * 0'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  send-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate and send report
+        env:
+          DARRELL_INSTANTLY_API_KEY: ${{ secrets.DARRELL_INSTANTLY_API_KEY }}
+          DARRELL_SLACK_WEBHOOK: ${{ secrets.DARRELL_SLACK_WEBHOOK }}
+        run: node api/test-report.js darrell

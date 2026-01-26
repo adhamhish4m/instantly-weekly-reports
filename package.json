@@ -1,0 +1,18 @@
+{
+  "name": "instantly-campaign-reporter",
+  "version": "1.0.0",
+  "description": "Weekly Instantly campaign performance reports to Slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "node api/test-report.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
