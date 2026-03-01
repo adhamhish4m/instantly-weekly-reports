@@ -32,6 +32,11 @@ const clients = {
     apiKey: process.env.TESTCLIENT7_PLUSVIBE_WORKSPACE_ID,
     slackChannelId: process.env.TESTCLIENT7_SLACK_CHANNEL_ID,
   },
+  testclient7: {
+    name: 'Testclient7',
+    apiKey: process.env.TESTCLIENT7_PLUSVIBE_WORKSPACE_ID,
+    slackChannelId: process.env.TESTCLIENT7_SLACK_CHANNEL_ID,
+  },
 };
 
 async function testReport(clientKey) {
