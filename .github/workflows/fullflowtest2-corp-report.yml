@@ -1,0 +1,31 @@
+name: FullFlowTest2 Corp Weekly Report
+
+on:
+  schedule:
+    # Every Sunday at 9:00 AM EST
+    - cron: '0 14 * * 0'
+  workflow_dispatch:
+
+jobs:
+  send-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate and send report
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          PLUSVIBE_API_KEY: ${{ secrets.PLUSVIBE_API_KEY }}
+          FULLFLOWTEST2_CORP_PLUSVIBE_WORKSPACE_ID: ${{ secrets.FULLFLOWTEST2_CORP_PLUSVIBE_WORKSPACE_ID }}
+          FULLFLOWTEST2_CORP_SLACK_CHANNEL_ID: ${{ secrets.FULLFLOWTEST2_CORP_SLACK_CHANNEL_ID }}
+        run: node api/test-report.js fullflowtest2-corp
