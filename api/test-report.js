@@ -27,6 +27,11 @@ const clients = {
     apiKey: process.env.DARRELL_INSTANTLY_API_KEY,
     slackWebhook: process.env.DARRELL_SLACK_WEBHOOK,
   },
+  'fullflowtest2-corp': {
+    name: 'FullFlowTest2 Corp',
+    workspaceId: process.env.FULLFLOWTEST2_CORP_PLUSVIBE_WORKSPACE_ID,
+    slackChannelId: process.env.FULLFLOWTEST2_CORP_SLACK_CHANNEL_ID,
+  },
   'fullflowtest-corp': {
     name: 'FullFlowTest Corp',
     workspaceId: process.env.FULLFLOWTEST_CORP_PLUSVIBE_WORKSPACE_ID,
